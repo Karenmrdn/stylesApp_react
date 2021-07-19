@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import React from "react";
+import styles from "./Button.module.css";
+
+/* import styled from "styled-components";
 
 const Button = styled.button`
   font: inherit;
@@ -19,6 +22,14 @@ const Button = styled.button`
     border-color: #ac0e77;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
   }
-`;
+`; */
+
+const Button = (props) => {
+  return (
+    <button className={styles.button} type={props.type} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+};
 
 export default Button;
